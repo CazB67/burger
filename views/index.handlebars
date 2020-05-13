@@ -1,0 +1,17 @@
+<div class="col-md-4">
+<ul>
+  {{#each burgers}}
+  <li>
+    <p>
+      {{this.id}}. {{this.burger}}
+
+      <button data-burgerid="{{this.id}}" class="createBurger">Submit</button>
+    </p>
+  </li>
+  {{/each}}
+</ul>
+</div>
+
+<div class="col-md-4"></div>
+
+<div class="col-md-4"></div>
