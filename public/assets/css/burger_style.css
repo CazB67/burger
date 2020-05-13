@@ -5,6 +5,7 @@ body {
 
 h1 {
     font-family: 'Chango', cursive;
+    font-size: 4em;
 }
 
 img {
@@ -15,4 +16,21 @@ img {
 .form-group {
     margin-left: 20%;
     margin-right: 20%;
+}
+
+ul {
+    list-style-type: none;
+  }
+
+.created-burgers {
+    background-color: black;
+    color: antiquewhite;
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+.devoured-burgers {
+    background-color: white;
+    font-size: 2em;
+    font-weight: bolder;
 }
