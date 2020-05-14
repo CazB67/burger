@@ -1,17 +1,40 @@
-<div class="col-md-4">
-<ul>
-  {{#each burgers}}
-  <li>
-    <p>
-      {{this.id}}. {{this.burger}}
 
-      <button data-burgerid="{{this.id}}" class="createBurger">Submit</button>
-    </p>
-  </li>
-  {{/each}}
-</ul>
+
+<div class ="row mt-3">
+    <div class="col-md-7">
+        <ul>
+        {{#each burgers}}
+        <li class="created-burgers p-2 mb-2 ">
+            {{burger_name}}
+            <button class="devour-it float-right" data-id="{{id}}" data-newdevoured="{{devoured}}">
+            Devour it!
+            </button>
+        </li>
+            {{/each}}
+        </ul>
+    </div> 
+    
+    <div class="col-md-5 text-center">
+        <ul>
+          {{#each burgers}}
+            <li class="devoured-burgers p-2 mb-2"> {{burger_name}}
+                    
+                    </li>
+          {{/each}}
+        </ul>
+    </div>
 </div>
 
-<div class="col-md-4"></div>
+<div class ="row mt-3">
+    <div class="col-md-12 text-center">
+        <form>
+        <div class="form-group center-block">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <br>
+        <label for="exampleFormControlTextarea1">Enter a burger you want to eat then click the "Submit" button. </label>
+        </form>
+    </div>
+</div>
 
-<div class="col-md-4"></div>

@@ -22,15 +22,15 @@ ul {
     list-style-type: none;
   }
 
-.created-burgers {
+.created-burgers, .btn {
     background-color: black;
     color: antiquewhite;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bolder;
 }
 
 .devoured-burgers {
     background-color: white;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bolder;
 }
