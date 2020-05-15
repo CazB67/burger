@@ -19,10 +19,4 @@ const burger = {
     },
   };
 
-
-
-
-
-
-
 module.exports = burger;
