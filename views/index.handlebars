@@ -4,21 +4,19 @@
     <div class="col-md-7">
         <ul>
         {{#each burgers}}
-        <li class="created-burgers p-2 mb-2 ">
-            {{burger_name}}
-            <button class="devour-it float-right" data-id="{{id}}" data-eatenBurger="{{devoured}}">
-            Devour it!
-            </button>
-        </li>
-            {{/each}}
+            {{#unless devoured}}
+      {{> burgers/burger-block devoured=false}}
+    {{/unless}}
+        {{/each}}
         </ul>
     </div> 
     
     <div class="col-md-5 text-center">
         <ul>
           {{#each burgers}}
-            <li class="devoured-burgers p-2 mb-2"> {{burger_name}}
-            </li>
+           {{#if devoured}}
+            {{> burgers/burger-block2 devoured=true}}
+            {{/if}}
           {{/each}}
         </ul>
     </div>
