@@ -20,11 +20,11 @@ console.log(newEatenState);
     $(".create-form").on("submit", function(event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
-    
-        const newBurger = {
+        let newBurger = {
           burger_name: $("#hamburger").val().trim(),
           devoured: 0
         };
+        newBurger.burger_name = newBurger.burger_name.charAt(0).toUpperCase() + newBurger.burger_name.slice(1).toLowerCase(); 
         
         // Send the POST request.
         $.ajax("/api/burgers", {
