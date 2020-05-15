@@ -1,10 +1,8 @@
 # Eat-Da-Burger
 A burger logger app with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). 
 
-![GitHub repo size](https://img.shields.io/github/repo-size/cazb67/burger)
-
 ## Description 
-![Last Commit](https://img.shields.io/github/last-commit/cazb67/employee-tracker) ![Top Language](https://img.shields.io/github/languages/top/cazb67/employee-tracker)
+![Last Commit](https://img.shields.io/github/last-commit/cazb67/burger) ![Top Language](https://img.shields.io/github/languages/top/cazb67/burger) ![GitHub repo size](https://img.shields.io/github/repo-size/cazb67/burger)
 
 The task was to create a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM following the MVC design pattern; and using Node and MySQL to query and route data, and Handlebars to generate HTML.
 

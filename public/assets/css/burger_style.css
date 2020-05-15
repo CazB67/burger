@@ -22,28 +22,21 @@ ul {
     list-style-type: none;
   }
 
-.created-burgers, .btn {
-    background-color: black;
-    color: antiquewhite;
-    font-size: 1.5em;
-    font-weight: bolder;
-}
-
-.devoured-burgers {
-    background-color: white;
-    font-size: 1.5em;
-    font-weight: bolder;
-}
-
-.devour-it {
-    background-color: white;
-    font-size: 0.8em;
-    font-weight: bolder;
-}
-
-.throw-up {
+.created-burgers, .btn, .throw-up {
     background-color: black;
     color: white;
-    font-size: 0.8em;
     font-weight: bolder;
+}
+
+.created-burgers, .btn, .devoured-burgers {
+    font-size: 1.5em;
+}
+
+.devoured-burgers, .devour-it {
+    background-color: white;
+    font-weight: bolder;
+}
+
+.devour-it, .throw-up {
+    font-size: 0.8em;
 }
