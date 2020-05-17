@@ -45,6 +45,16 @@ const orm = {
         });
       },
 
+      deleteAll: function(tableInput, cb) {
+        const queryString = "DELETE FROM " + tableInput;
+        connection.query(queryString, function(err, result) {
+          if (err) {
+            throw err;
+          }
+          cb(result);
+        });
+      },
+
     checkForDuplicates: function(table, condition, cb) {
       const queryString = "SELECT * FROM " + table + " WHERE " + condition + ";";
       connection.query(queryString, function(err, result) {

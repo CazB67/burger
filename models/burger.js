@@ -6,6 +6,12 @@ const burger = {
         cb(res);
       });
     },
+
+    deleteAll: function(cb) {
+      orm.deleteAll("burgers", function(res) {
+        cb(res);
+      });
+    },
     // The variables cols and vals are arrays.
     insertOne: function(cols, vals, cb) {
       orm.insertOne("burgers", cols, vals, function(res) {

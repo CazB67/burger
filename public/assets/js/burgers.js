@@ -33,6 +33,19 @@ $(function() {
       );
     });
 
+    $(".delete").on("click", function(event) {
+      // Send the DELETE request.
+      $.ajax("/api/delete", {
+        type: "DELETE"
+      }).then(
+        function() {
+          console.log("deleted cat");
+          // Reload the page to get the updated list
+          location.reload();
+        }
+      );
+    });
+
     $(".create-form").on("submit", function(event) {
       event.preventDefault();
         let newBurger = {

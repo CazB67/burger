@@ -11,6 +11,15 @@ router.get("/", function(req, res) {
     });
   });
 
+  router.delete("/api/delete", function(req, res) {
+    burger.deleteAll(function(data) {
+      let hbsObject = {
+        burgers: data
+      };
+      res.render("index", hbsObject);
+    });
+  });
+
   router.post("/api/burgers", function(req, res) {
     burger.insertOne([
       "burger_name", "devoured"
