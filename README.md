@@ -34,7 +34,7 @@ The URL of the deployed application is
 
 The following GIF shows the application's functionality and how to use. 
 
-<img src="" width="450" height="300" title="Eat-Da-Burger! App">
+<img src="public/assets/img/burger.gif" width="450" height="300" title="Eat-Da-Burger! App">
 
 ## Technologies
 NPM, Node js, Inquirer, mySQL
