@@ -30,7 +30,7 @@ If running the project from Heroku:
 ## Usage
 The URL of the git hub repository is https://github.com/CazB67/burger
 
-The URL of the deployed application is 
+The URL of the deployed application is https://blooming-chamber-66556.herokuapp.com/
 
 The following GIF shows the application's functionality and how to use. 
 
