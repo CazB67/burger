@@ -57,9 +57,11 @@ $(function() {
                     location.reload();
                   });
               }
+              else {
+                location.reload();
+              }
             });
           }
-          location.reload();
     });
   });
 
