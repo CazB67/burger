@@ -12,6 +12,13 @@ const burger = {
         cb(res);
       });
     },
+
+    checkForDuplicates: function(condition, cb) {
+      orm.checkForDuplicates("burgers", condition, function(res) {
+        cb(res);
+      });
+    },
+  
     updateOne: function(objColVals, condition, cb) {
       orm.updateOne("burgers", objColVals, condition, function(res) {
         cb(res);

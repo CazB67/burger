@@ -40,20 +40,27 @@ $(function() {
           devoured: 0
         };
         
-        newBurger.burger_name = newBurger.burger_name.charAt(0).toUpperCase() + newBurger.burger_name.slice(1).toLowerCase(); 
-        
-        if(newBurger.burger_name.length > 0){
-          $.ajax("/api/burgers", {
+        newBurger.burger_name = newBurger.burger_name.toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
+        if(newBurger.burger_name.length > 0  ){
+          $.ajax("/api/duplicates", {
             type: "POST",
             data: newBurger
           }).then(
-            function() {
-              // Reload the page to get the updated list
-              location.reload();
-            }
-          );
-        }
-      });
+            function(res) {
+              if(res.duplicate === 0){
+                $.ajax("/api/burgers", {
+                  type: "POST",
+                  data: newBurger
+                }).then(
+                  function() {
+                    // Reload the page to get the updated list
+                    location.reload();
+                  });
+              }
+            });
+          }
+          location.reload();
     });
+  });
 
     

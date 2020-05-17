@@ -7,7 +7,6 @@ router.get("/", function(req, res) {
       let hbsObject = {
         burgers: data
       };
-     
       res.render("index", hbsObject);
     });
   });
@@ -20,6 +19,18 @@ router.get("/", function(req, res) {
     ], function(result) {
       // Send back the ID of the new quote
       res.json({ id: result.insertId });
+    });
+  });
+
+  router.post("/api/duplicates", function(req, res) {
+    burger.checkForDuplicates(
+      "burger_name = '" + req.body.burger_name+"'"
+    , function(result) {
+      if(result.length > 0){
+        res.json({ duplicate: 1 });
+      }else{
+        res.json({ duplicate: 0 });
+      }
     });
   });
 

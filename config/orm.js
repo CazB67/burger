@@ -36,7 +36,7 @@ function printQuestionMarks(num) {
 // Object for all our SQL statement functions.
 const orm = {
     selectAll: function(tableInput, cb) {
-        const queryString = "SELECT * FROM " + tableInput + ";";
+        const queryString = "SELECT * FROM " + tableInput + " ORDER BY burger_name ASC;";
         connection.query(queryString, function(err, result) {
           if (err) {
             throw err;
@@ -44,6 +44,17 @@ const orm = {
           cb(result);
         });
       },
+
+    checkForDuplicates: function(table, condition, cb) {
+      const queryString = "SELECT * FROM " + table + " WHERE " + condition + ";";
+      connection.query(queryString, function(err, result) {
+        if (err) {
+          throw err;
+        }
+        cb(result);
+      });
+    },
+      
     insertOne: function(table, cols, vals, cb) {
       let queryString = "INSERT INTO " + table;
   
